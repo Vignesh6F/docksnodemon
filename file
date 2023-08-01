@@ -1,0 +1,6 @@
+docker run --name bacon -e MONGODB_USERNAME=vky -e MONGODB_PASSWORD=vky -v 
+/Users/trioangle/Desktop/vky/docs/multi/backend:/app -v /app/node_modules -v logs:/app/logs 
+--rm -d --network froend-net -p 80:80 bac:img
+
+docker run --name mongodb --network froend-net -e MONGO_INITDB_ROOT_USERNAME=vky -e 
+MONGO_INITDB_ROOT_PASSWORD=vky -v data:/data/db --rm -d  mongo
